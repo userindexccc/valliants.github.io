@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>HOME - Announcement</title>
+	<link rel="icon" type="image/png" href="images/valiants.png"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/style-page.css">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+	      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+	      crossorigin="anonymous"
+	      referrerpolicy="no-referrer"
+	    />
+</head>
+<body>
+<!----- THIS IS THE HEADER ------->
+<header class="NavigationBar"> 
+	<input type="checkbox" id="nav_check" hidden>
+	<nav>
+		<ul>
+			<li>
+				<a href="Index2.html" style=" font-size: 23px;"><i class="fa-solid fa-less-than"></i></a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<!----- THIS IS THE BODY ------->
+<section class="main-container">
+	<div class="announcements-body">
+		<div class="announcements-left">
+			<h2>SPORTS DEVELOPMENT OFFICE</h2>
+			<h3>Announcements</h3>
+			<div class="announcements-cont">
+				<div class="announcements-row">
+					<!-- <?php
+						include '../ADMIN_INTERFACE/upload.php';
+
+						$query = "SELECT * FROM tb_adminpage";
+						$query_run = mysqli_query($conn, $query);
+						$check_adminpage = mysqli_num_rows($query_run) > 0;
+						
+						if ($check_adminpage) {
+							while($row = mysqli_fetch_assoc($query_run)){
+								?> -->
+					<style>
+						.title a{
+							border-bottom: none;
+						}
+						.title a:hover{
+							color: dodgerblue;
+							border-bottom: dotted 2px;
+						}
+						.announcements-col{
+							margin: auto;
+						}
+						.announcements-card{
+							/*padding: 0 5px 0 5px;*/
+							/*box-shadow: 0 0 15px #acacac;*/
+							border: 2px solid rgba(0, 0, 0, 0.1);
+							margin: 35px 0;
+							background: rgba(0, 0, 0, 0.05);
+						}
+						.announcements-card-body{
+							/*padding: 5px;*/
+						}
+						.titleDate{
+						    display: flex;
+						    justify-content: left;
+						    padding-top: -10px;
+						    padding-bottom: -10px;
+						    padding: 15px 20px;
+						}
+
+						.titleDate-inner .title{
+						    font-size: 0.95em;
+						    margin-top: -10px;
+						    margin-bottom: -35px;
+						    border: none;
+						    font-weight: bold;
+						    text-align: justify;
+						    color: rgba(0, 0, 0, 0.75);
+						    font-family: 'Times New Roman', serif;
+						}
+						.titleDate-inner .date{
+						    /*margin-top: -10px;*/
+						    font-size: 0.65em;
+						    font-weight: 100;
+						    margin-bottom: -10px;
+						    border: none;
+						    font-family: 'Poppins', sans-serif;
+						}
+						.img-holder{
+							display: flex;
+							flex-wrap: wrap;
+						}
+						.img-holder img{
+							margin: 0 0 3px 0;
+						}
+					</style>
+					<div class="announcements-col">
+						<div class="announcements-card">
+							<div class="announcements-card-body">
+								<div class="img-holder">
+									<?php 
+									    if (!empty($row['image'])):
+									?>
+										<?php foreach(json_decode($row["image"]) as $image) : ?>
+											<img src="../ADMIN_INTERFACE/upload-img/<?php echo $image; ?>" width="100%" height="150px">
+                                        <?php endforeach; ?>
+                                    <?php endif; ?>
+								</div>
+								<div class="titleDate">
+									<div class="titleDate-inner">
+										<h2 class="title"><a href="#target'.<?php echo $row['id']; ?>.'" onclick="scaleAndScrollTo(\''.<?php $row['id']; ?>.'\')"><?php echo $row['title']; ?></a></h2>
+
+										<h2 class='date'><?php $dateFormatted = date("F d, Y", strtotime($row['date']));echo $dateFormatted; ?></h2>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php
+						}
+					}	
+					else{
+						echo "<h1 style='display: flex; justify-content: center; margin-bottom: -1px; cursor: default;'>No Record Found</h1>";
+					}
+				?>
+				</div>
+			</div>
+		</div>
+
+<!-- THIS IS THE RIGHT SIDE -->
+		<div class="announcements-right">
+			<div class="right-announcements-cont">
+				<div class="right-announcements-row">
+					<?php
+						include '../ADMIN_INTERFACE/upload.php';
+						include '../ADMIN_INTERFACE/delete.php';
+						
+						$query = "SELECT * FROM tb_adminpage";
+						$query_run = mysqli_query($conn, $query);
+						$check_adminpage = mysqli_num_rows($query_run) > 0;
+						
+						if ($check_adminpage) {
+							while($row = mysqli_fetch_assoc($query_run)){
+								?>
+<style>
+	.right-announcements-card{
+		/*border: 1px solid rgba(0, 0, 0, 0.2);*/
+		margin: 35px 0;
+		background: #fff;
+		box-shadow: 0 0 10px #acacac;
+		padding: 0 20px;
+	}
+
+	.right-titleDate{
+		width: 100%;
+		border-bottom: 2px solid #ccc;
+	}
+	.right-titleDate-inner{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 30px 0;
+	}
+	.right-title-inner{
+		flex-basis: 70%;
+		border-right: 2px solid #ccc;
+		height: 100%;
+	}
+	.right-title{
+		display: flex;
+		text-align: left;
+		margin: auto;
+		padding: 15px 25px;
+		font-size: 1.35em;
+		color: rgba(0, 0, 0, 0.7);
+		font-family: 'Poppins', sans-serif;
+	}
+	.right-date-inner{
+		flex-basis: 30%;
+	}
+	.right-date{
+		padding: 0 20px;
+		font-size: 0.9em;
+		color: rgba(0, 0, 0, 0.6);
+		display: flex;
+		justify-content: center;
+		margin: auto;
+	}
+	.right-img-holder{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0 15px;
+		padding-top: 25px;
+		padding-bottom: 25px;
+		border-bottom: 2px solid #ccc;
+	}
+	.right-img-holder img{
+		margin: 1px 1px;
+		box-shadow: 0 0 35px #ccc;
+	}
+	.message{
+		margin: 0 15px;
+		padding: 30px 70px 20px 70px;
+	}
+	.message h6{
+		text-align: justify;
+		font-size: 1.0em;
+		font-weight: 100;
+		color: rgba(0, 0, 0, 1);
+		font-family: 'Calibri', sans-serif;
+	}
+</style>
+					<div class="right-announcements-col">
+						<div class="right-announcements-card" id="target'.<?php echo $row['id']; ?>.'">
+							<div class="right-announcements-card-body">
+								<div class="right-titleDate">
+									<div class="right-titleDate-inner">
+										<div class="right-title-inner">
+											<h2 class="right-title"><?php echo $row['title']; ?></h2>
+										</div>
+										<div class="right-date-inner">
+											<h2 class="right-date"><?php $dateFormatted = date("F d, Y", strtotime($row['date']));echo $dateFormatted; ?></h2>
+										</div>
+									</div>
+								</div>
+								<div class="right-imgMessage">
+								<?php 
+										    if (!empty($row['image'])):
+										?>
+									<div class="right-img-holder">
+								<?php endif; ?>
+										<?php 
+										    if (!empty($row['image'])):
+										?>
+											<?php foreach(json_decode($row["image"]) as $image) : ?>
+												<img src="../ADMIN_INTERFACE/upload-img/<?php echo $image; ?>" width="85%" height="400px" >
+	                                        <?php endforeach; ?>
+	                                    <?php endif; ?>
+									</div>
+									<div class="message">
+										<h6><?php $textareaContent = $row['message']; $newTittleFormat = nl2br($textareaContent); echo $newTittleFormat;  ?></h6>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<?php
+						}
+					}	
+					else{
+						echo "<h1 style='display: flex; justify-content: center; margin-bottom: -1px; cursor: default;'>No Record Found</h1>";
+					}
+				?>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+
+<!----- THIS IS THE FOOTER ------->
+<?php 
+	include 'Index2-Bottom.php';
+?>

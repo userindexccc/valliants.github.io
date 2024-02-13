@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Events</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style-page.css">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+	      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+	      crossorigin="anonymous"
+	      referrerpolicy="no-referrer"
+	    />
+</head>
+<body>
+<!----- THIS IS THE HEADER ------->
+<header class="NavigationBar"> 
+	<input type="checkbox" id="nav_check" hidden>
+	<nav>
+		<ul>
+			<li>
+				<a href="Index2.html" style=" font-size: 23px;"><i class="fa-solid fa-less-than"></i></a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<style>
+	.left-desc a{
+		border-bottom: none;
+	}
+	.left-desc a:hover{
+		color: rgba(255, 0, 0, 0.8);
+		border-bottom: dotted 2px;
+	}
+	.events-main-container{
+	    padding: 30px 0 250px 0;
+	    background: #fff;
+	    display: flex;
+	}
+
+	.events-body{
+	    justify-content: space-between;
+	    padding: 2%;
+	    width: 100%;
+	    display: flex;
+	    min-height: 100vh;
+	}
+	.events-left{
+		width: 25%;
+	}
+	.events-left h2{
+		text-align: left;
+	    font-size: 2.1em;
+	    line-height: 1.2em;
+	    padding: 20px 0;
+	    border-bottom: 0.5px solid #ccc;
+	}
+	.events-left h3{
+	    text-align: left;
+	    font-size: 0.98em;
+	    color: rgba(255, 0, 0, 0.9);
+	    margin-top: -15px;
+	    margin-bottom: 1em;
+	}
+	.events-right{
+		flex-basis: 70%;
+		margin-left: 15px;
+		box-sizing: border-box;
+	}
+	.events-card{
+		margin-bottom: 45px;
+	}
+	.events-card-body{
+		width: 100%;
+	}
+	.events-left-date{
+		width: 100%;
+		justify-content: center;
+		display: flex;
+		margin-top: -40px;
+	}
+	.events-left-date-inner{
+		background: linear-gradient(to top, #233162, royalblue);
+		padding: 18px;
+		/*width: 150px;*/
+		border-radius: 2px;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+	}
+	.imgLeft{
+		display: flex;
+		justify-content: center;
+		margin: auto;
+	}
+	.events-left-date-inner h4{
+		color: #fff;
+		font-family: 'Times New Roman', serif;
+		font-size: 1.15em;
+	}
+	.left-desc{
+		margin-bottom: -1px;
+	}
+
+/*RIGHT*/
+	.events-card-right{
+		width: 100%;
+		margin-bottom: 40px;
+	}
+	.events-card-body-right{
+		display: flex;
+		justify-content: center;
+		/*align-items: center;*/
+		width: 100%;
+		box-shadow: 0 0 20px #ccc; /*18px 20px*/
+		background: rgba(0, 0, 0, 0.04);
+	}
+	.right-imgHolder{
+		width: 48%;
+	}
+	.evntsInfo{
+		flex-basis: 52%;
+		height: 100%;
+		padding: 40px 30px;
+	}
+	.titleDate{
+		/*padding: 10px 10px;*/
+		/*box-shadow: 0 2px 15px #acacac;*/
+	}
+	.evntTitle{
+		margin-bottom: -1px;
+		text-align: left;
+		text-align: left;
+		color: rgba(0, 0, 0, 0.9);
+		font-size: 1.9em;
+		line-height: 1em;
+		font-weight: bold;
+		font-family: 'Times New Roman', serif;
+		text-transform: uppercase;
+	}
+	.date{
+		margin-top: 15px;
+		margin-bottom: -1px;
+		text-align: justify;
+		font-size: 1.05em;
+		font-weight: bold;
+	}
+	.dateSpan{
+		color: rgba(255, 0, 0, 0.8);
+	}
+	.right-desc{
+		margin-top: 20px;
+	}
+	.desc{
+		font-size: 0.84em;
+		margin-bottom: -1px;
+		text-align: justify;
+		font-weight: bold;
+		font-family: 'Poppins', sans-serif;
+	}
+</style>
+
+<!----- THIS IS THE BODY ------->
+<section class="events-main-container">
+	<div class="events-body">
+		<div class="events-left">
+			<h2>SPORTS DEVELOPMENT OFFICE</h2>
+			<h3>EVENTS</h3>
+			<div class="events-left-list">
+				<div class="events-container">
+					<div class="events-row">
+						<!-- <?php
+							include '../ADMIN_INTERFACE/eventsDB.php';
+							
+							$query = "SELECT * FROM tb_eventpage";
+							$query_run = mysqli_query($conn, $query);
+							$check_eventpage = mysqli_num_rows($query_run) > 0;
+							if ($check_eventpage) {
+								while($row = mysqli_fetch_assoc($query_run)){
+						?> -->
+
+						<div class="events-col">
+							<div class="events-card">
+								<div class="events-card-body">
+									<!-- <?php foreach(json_decode($row["image"]) as $image) : ?>
+										<img src="../ADMIN_INTERFACE/upload-img/<?php echo $image; ?>" width="100%" height="210px" class="imgLeft">
+                                    <?php endforeach; ?> -->
+									<div class="events-left-date">
+										<div class="events-left-date-inner">
+											<h4 class="left-desc"><a href="#target'.<?php echo $row['id']; ?>.'" onclick="scaleAndScrollTo(\''.<?php $row['id']; ?>.'\')"><?php echo $row['eventDate']; ?></a></h4>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- <?php
+								}
+							}	
+							else{
+								echo "<h1 style='display: flex; justify-content: center; margin-bottom: -1px; cursor: default;'>No Record Found</h1>";
+							}
+						?> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="events-right">
+			<div class="events-container-right">
+					<div class="events-row-right">
+						<!-- <?php
+							include '../ADMIN_INTERFACE/eventsDB.php';
+							
+							$query = "SELECT * FROM tb_eventpage";
+							$query_run = mysqli_query($conn, $query);
+							$check_eventpage = mysqli_num_rows($query_run) > 0;
+							if ($check_eventpage) {
+								while($row = mysqli_fetch_assoc($query_run)){
+						?> -->
+
+						<div class="events-col-right" id="target'.<?php echo $row['id']; ?>.'">
+							<div class="events-card-right">
+								<div class="events-card-body-right">
+									<div class="right-imgHolder">
+										<!-- <?php foreach(json_decode($row["image"]) as $image) : ?>
+											<img src="../ADMIN_INTERFACE/upload-img/<?php echo $image; ?>" width="100%" height="100%" class="imgRight">
+	                                    <?php endforeach; ?> -->
+									</div>
+									<div class="evntsInfo">
+										<div class="titleDate">
+											<h2 class="evntTitle"><?php echo $row['eventTitle']; ?></h2>
+											<p class="date"><span class="dateSpan">This <?php echo $row['eventDate']; ?></span></p>
+										</div>
+										<div class="right-desc">
+											<p class="desc"><?php $textareaContent = $row['eventMessage']; $newTittleFormat = nl2br($textareaContent); echo $newTittleFormat;  ?>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<!-- <?php
+								}
+							}	
+							else{
+								echo "<h1 style='display: flex; justify-content: center; margin-bottom: -1px; cursor: default;'>No Record Found</h1>";
+							}
+						?> -->
+					</div>
+				</div>
+		</div>
+	</div>
+</section>
+
+
+
+
+<!----- THIS IS THE FOOTER ------->
+<?php 
+	include 'Index2-Bottom.php';
+?>

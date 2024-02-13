@@ -1,0 +1,84 @@
+
+
+<!DOCTYPE html>
+<html> 
+
+     
+<head>
+    <title>Sports Registration</title>
+            <link rel="stylesheet" href="assets/css/Forms.css" />
+        
+    <link rel="shortcut icon" href="/img/icons.png" type="image/x-icon">
+       <script src="assets/js/ignacio.form.js"></script>
+
+</head>
+<body> 
+    <main>
+        <div class="split">
+            <div class="sidepic"> 
+                <section class="copy"> <!--selection-->
+                    <h1>Valliants Application</h1>
+                 </section>
+            </div>   
+        
+
+        <div class="sideform">
+    <form method="post" action="process.php" id="loginForm">
+        <h2>Application Form For Valiants</h2>
+        <section class="copy copy-rightside form-right"> <!--selection we need container-->
+        <label for="e-Guro">e-Guro Username</label>
+        <input title="e-GuroID should only contain numbers. e.g. 2021-00312" required type="text" name="cccid" id="cccid" placeholder="xxxx-xxxxx" onfocusout="Validate()"><br><br>
+        
+        <div id="container_1">
+            <label for="name">Name:</label>   
+            <input title="Name should only contain Uppercase or lowercases letters. e.g. Ccc Valiants"
+        pattern="[a-zA-Z ]{10,}" required type="text" maxlength="28" minlength="6"  name="name" id="name" placeholder="Juan C. Dela Cruz"><br><br>
+    
+            <label for="email">CCC-Email:</label>                                
+            <input title="Email shoul be contain 'a-zA-z' +@ 'a-z[3]' +. 'a-z[3]' +. 'a-z[2]' e.g. name@ccc.edu.ph" 
+        pattern="[a-zA-Z]+@ccc.edu.ph" required type="email" name="email" id="email" placeholder="example@ccc.edu.ph"><br><br>
+
+        <label for="age">Age:</label>
+        <input title="Age should 16 above" required type="number" name="age" id="age" placeholder="input age"  min="18" max="29"><br><br>
+
+        <div class="gender-section">
+            <label for="gender" id="gender">Gender:</label> 
+            <input type="radio" value="Male" name="gender"> Male <span class="space"></span>
+            <input type="radio" value="Female" name="gender"> Female
+        </div>
+         
+<!--Array -->  
+            <label for="sports[]" id="sports[]">Organization: <br>
+                <input type="checkbox" name="sports[]" value="Basketball" > Basketball
+                <input type="checkbox" name="sports[]" value="Volleyball" >  Volleyball
+                <input type="checkbox" name="sports[]" value="Badminton" > Badminton
+                <input type="checkbox" name="sports[]" value="Cheerdance" >  Cheerdance
+                <input type="checkbox" name="sports[]" value="Chess" >  Chess
+                <br> <br>
+            </label>
+
+        <label for="checkboxi"> 
+            <input type="checkbox" name="checkboxi" id="checkboxi" required>I agree to the <a href="privacy.html" target="_blank">Privacy Policy<span> & </span>Terms of service</a>.
+          <br> <br>
+        </label>
+   
+
+        <div class="seperate">
+            <input type="submit" value="Submit" id="btnsign"> 
+            <a href="Index2.html" id="linkignacio">Change your mind?</a>
+            </div>
+        </div> 
+
+</section>
+    </form>
+        </div>
+        
+    </div>
+</main>
+</body>
+
+</html> 
+
+
+
+

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>SPORTS</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style-page.css">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+	      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+	      crossorigin="anonymous"
+	      referrerpolicy="no-referrer"
+	    />
+</head>
+<body>
+<!----- THIS IS THE HEADER ------->
+<header class="NavigationBar"> 
+	<input type="checkbox" id="nav_check" hidden>
+	<nav>
+		<ul>
+			<li>
+				<a href="Index2.html" style=" font-size: 23px;"><i class="fa-solid fa-less-than"></i></a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<style>
+	.sports-main-container{
+	    padding: 30px 0 250px 0;
+	    background: #fff;
+	    display: flex;
+	}
+	.sports-body{
+	    justify-content: space-between;
+	    padding: 2%;
+	    width: 100%;
+	    display: flex;
+	    min-height: 100vh;
+	}
+	.sports-left{
+		width: 25%;
+	}
+	.sports-left h2{
+		text-align: left;
+	    font-size: 2.1em;
+	    line-height: 1.2em;
+	    padding: 20px 0;
+	    border-bottom: 0.5px solid #ccc;
+	}
+	.sports-left h3{
+	    text-align: left;
+	    font-size: 0.98em;
+	    color: rgba(255, 0, 0, 0.9);
+	    margin-top: -15px;
+	    margin-bottom: 1em;
+	}
+	.sports-right{
+		flex-basis: 65%;
+	}
+	.sports-container{
+		width: 100%;
+		height: 100%;
+	}
+	.sports-row{
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	.sports-col{
+		width: 100%;
+	}
+	.indoorCont, .outdoorCont{
+		margin-bottom: 30px;
+		background: rgba(0, 0, 0, 0.05);
+		border: 0.1px solid #acacac;
+		border-radius: 7px;
+	}
+	.indoorCont-label, .outdoorCont-label{
+		justify-content: center;
+		display: flex;
+		padding: 13px 0;
+		font-size: 0.9em;
+		background: #263565;
+		color: #fff;
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+	}
+	.sports-card-body .letter{
+		font-size: 0.935em;
+		color: rgba(0, 0, 0, 0.8);
+		margin-top: 1px;
+		margin-bottom: -1px;
+	}
+	.sports-card-body .letter a{
+		border-bottom: none;
+	}
+	.sports-card-body .letter a:hover{
+		color: dodgerblue;
+		border-bottom: dotted 2px;
+	}
+	.sports-card{
+		padding-left: 40px;
+		display: flex;
+		align-items: center;
+		text-align: left;
+	} 
+	.letter{
+		text-transform: uppercase;
+	}
+
+/*RIGHT*/
+	.indoorRight, .outdoorRight{
+		width: 100%;
+	}
+	.indoorRight{
+		margin-bottom: 30px;
+	}
+	.letterRight{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 1.4em;
+		padding: 15px 0;
+	}
+	.sports-row-right{
+		/*box-shadow: 0 0 15px #acacac;*/
+		padding-bottom: 10px;
+		/*background: rgba(0, 0, 0, 0.07);*/
+	}
+	.sports-card-right{
+		width: 100%;
+		margin-top: 10px;
+		margin-bottom: 30px;
+	}
+	.sports-card-body-right{
+		background: rgba(0, 0, 0, 0.02);
+		padding: 40px;
+		box-shadow: 0 0 10px #acacac;
+	}
+	.card-body{
+		margin-top: 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.card-title{
+		font-size: 1.5em;
+		border-bottom: 2px solid #ccc;
+	}
+	.card-body img{
+		box-shadow: 0 0 10px #acacac;
+		transition: transform 0.2s ease-in-out;
+	}
+	.card-body img:hover{
+		transform: scale(1.05);
+	}
+	.card-body .desc{
+		margin-left: 20px;
+		text-align: justify;
+		padding-top: 10px;
+		font-size: 1em;
+		line-height: 1.2em;
+		font-family: 'Times New Roman', serif;
+	}
+</style>
+<!----- THIS IS THE BODY ------->
+<section class="main-container">
+	<div class="sports-body">
+		<div class="sports-left">
+			<h2>SPORTS DEVELOPMENT OFFICE</h2>
+			<h3>SPORTS PAGE</h3>
+			<div class="indoorCont">
+				<label class="indoorCont-label">LIST OF INDOOR SPORTS</label>
+				<div class="sports-container">
+					<div class="sports-row">
+						<!-- <?php
+							include '../ADMIN_INTERFACE/sports.html';
+							
+							$query = "SELECT * FROM tb_indoorsportpage";
+							$query_run = mysqli_query($conn, $query);
+							$check_insportpage = mysqli_num_rows($query_run) > 0;
+							if ($check_insportpage) {
+								while($row = mysqli_fetch_assoc($query_run)){
+									?> -->
+						<div class="sports-col">
+							<div class="sports-card">
+								<div class="sports-card-body">
+									<h3 class="letter"><a href="#target'.<?html echo $row['id']; ?>.'" onclick="scaleAndScrollTo(\''.<?html $row['id']; ?>.'\')"><?html  echo $row['indoorName']; ?></a></h3>
+								</div>
+							</div>
+						</div>
+						<!-- <?php
+								}
+							}	
+							else{
+								echo "<h1 style='display: flex; justify-content: center; margin-bottom: -1px; cursor: default;'>No Record Found</h1>";
+							}
+						?> -->
+					</div>
+				</div>
+			</div>
+			<div class="outdoorCont">
+				<label class="outdoorCont-label">LIST OF OUTDOOR SPORTS</label>
+				<div class="sports-container">
+					<div class="sports-row">
+						<!-- <?php
+							include '../ADMIN_INTERFACE/outdoorSports.html';
+							
+							$query = "SELECT * FROM tb_outdoorsportpage";
+							$query_run = mysqli_query($conn, $query);
+							$check_outdoorsportpage = mysqli_num_rows($query_run) > 0;
+							
+							if ($check_outdoorsportpage) {
+								while($row = mysqli_fetch_assoc($query_run)){
+									?> -->
+						<div class="sports-col">
+							<div class="sports-card">
+								<div class="sports-card-body">
+									<h3 class="letter"><a href="#targetOut'.<?html echo $row['id']; ?>.'" onclick="scaleAndScrollTo(\''.<?html $row['id']; ?>.'\')"><?html echo $row['outdoorName']; ?></a></h3>
+								</div>
+							</div>
+						</div>
+						<!-- <?php
+
+								}
+							}
+							
+							else{
+								echo "<h1 style='display: flex; justify-content: center; margin-bottom: -1px; cursor: default;'>No Record Found</h1>";
+							}
+							
+						?> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+<!-- RIGHT SIDE -->
+		<div class="sports-right">
+			<div class="indoorRight">
+				<label class="letterRight">INDOOR SPORT</label>
+				<div class="sports-container">
+					<div class="sports-row-right">
+						<?html
+							include '../ADMIN_INTERFACE/sports.html';
+							
+							$query = "SELECT * FROM tb_indoorsportpage";
+							$query_run = mysqli_query($conn, $query);
+							$check_indoorsportpage = mysqli_num_rows($query_run) > 0;
+							
+							if ($check_indoorsportpage) {
+								while($row = mysqli_fetch_assoc($query_run)){
+									?>
+						<div class="sports-col">
+							<div class="sports-card-right" id="target'.<?html echo $row['id']; ?>.'">
+								<div class="sports-card-body-right">
+									<label class="card-title"><?html echo $row['indoorName']; ?></label>
+									<div class="card-body">
+										<?html foreach(json_decode($row["indoorImage"]) as $image) : ?>
+											<img src="../ADMIN_INTERFACE/upload-img/<?html echo $image; ?>" width="400px" height="400px">
+                                        <?html endforeach; ?>
+										<p class="desc"><?html echo $row['indoorDesc']; ?></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<?html
+								}
+							}	
+							else{
+								echo "<h1 style='display: flex; justify-content: center; margin-bottom: -1px; cursor: default; padding: 15px 0; background: rgba(0, 0, 0, 0.02); box-shadow: 0 0 10px #acacac; '>No Record Found</h1>";
+							}
+						?>
+					</div>
+				</div>
+			</div>
+
+			<div class="outdoorRight">
+				<label class="letterRight">OUTDOOR SPORT</label>
+				<div class="sports-container">
+					<div class="sports-row-right">
+						<?html
+							include '../ADMIN_INTERFACE/outdoorSports.html';
+							
+							$query = "SELECT * FROM tb_outdoorsportpage";
+							$query_run = mysqli_query($conn, $query);
+							$check_outdoorsportpage = mysqli_num_rows($query_run) > 0;
+							
+							if ($check_outdoorsportpage) {
+								while($row = mysqli_fetch_assoc($query_run)){
+									?>
+						<div class="sports-col">
+							<div class="sports-card-right" id="targetOut'.<?html echo $row['id']; ?>.'">
+								<div class="sports-card-body-right">
+									<label class="card-title"><?html echo $row['outdoorName']; ?></label>
+									<div class="card-body">
+										<?html foreach(json_decode($row["outdoorImage"]) as $images) : ?>
+											<img src="../ADMIN_INTERFACE/upload-img/<?html echo $images; ?>" width="400px" height="400px">
+                                        <?html endforeach; ?>
+										<p class="desc"><?html echo $row['outdoorDesc']; ?></p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<?html
+								}
+							}	
+							else{
+								echo "<h1 style='display: flex; justify-content: center; margin-bottom: -1px; cursor: default; padding: 15px 0; background: rgba(0, 0, 0, 0.02); box-shadow: 0 0 10px #acacac;'>No Record Found</h1>";
+							}
+						?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!----- THIS IS THE FOOTER ------->
+<?html 
+	include 'Index2-Bottom.html';
+?>

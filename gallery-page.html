@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Gallery</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style-page.css">
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+	      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+	      crossorigin="anonymous"
+	      referrerpolicy="no-referrer"
+	    />
+</head>
+<body>
+<!----- THIS IS THE HEADER ------->
+<header class="NavigationBar"> 
+	<input type="checkbox" id="nav_check" hidden>
+	<nav>
+		<ul>
+			<li>
+				<a href="Index2.php" style=" font-size: 23px;"><i class="fa-solid fa-less-than"></i></a>
+			</li>
+		</ul>
+	</nav>
+</header>
+<style>
+	.gallery-main-container{
+	    width: 100%;
+	}
+
+	.gallery-body{
+	    width: 100%;
+	    min-height: 100vh;
+	}
+	.intro{
+		text-transform: uppercase;
+		margin-bottom: -1px;
+		font-size: 2.3em;
+		text-align: center;
+		padding: 20px 150px;
+	}
+	.gallery-row{
+		width: 100%;
+		padding: 50px 15px;
+		padding-left: 20px;
+	}
+	.gallery-card{
+		margin-bottom: 30px;
+	}
+	
+	.dateGallery{
+		text-align: left;
+		font-size: 0.92em;
+		margin-bottom: -1px;
+	}
+</style>
+
+<!----- THIS IS THE BODY ------->
+<section class="main-container">
+	<div class="gallery-body">
+		<div class="gallery-container">
+			<h1 class="intro">Hello! Welcome to our photo gallery</h1>
+			<div class="gallery-row">
+				<?php
+					include '../ADMIN_INTERFACE/gallery.php';
+
+					$query = "SELECT * FROM tb_gallerypage";
+					$query_run = mysqli_query($conn, $query);
+					$check_gallerypage = mysqli_num_rows($query_run) > 0;
+					if ($check_gallerypage) {
+						while($row = mysqli_fetch_assoc($query_run)){
+				?>
+				<div class="gallery-col">
+					<div class="gallery-card">
+						<h6 class="dateGallery"><?php $dateFormatted = date("F d, Y", strtotime($row['date'])); echo $dateFormatted; ?></h6>
+						<div class="gallery-card-body">
+							<?php foreach(json_decode($row["image"]) as $image) : ?>
+								<img src="../ADMIN_INTERFACE/upload-img/<?php echo $image; ?>" width="32%" height="350px" class="imgGallery">
+	                        <?php endforeach; ?>
+						</div>
+					</div>
+				</div>
+				<?php
+						}
+					}	
+					else{
+						echo "<h1 style='display: flex; justify-content: center; margin-bottom: -1px; cursor: default;'>No Record Found</h1>";
+					}
+				?>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!----- THIS IS THE FOOTER ------->
+<?php 
+	include 'Index2-Bottom.php';
+?>
